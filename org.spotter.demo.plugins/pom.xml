@@ -31,6 +31,7 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-shade-plugin</artifactId>
 				<version>2.1</version>
+				
 				<executions>
 					<execution>
 						<phase>package</phase>
@@ -38,6 +39,7 @@
 							<goal>shade</goal>
 						</goals>
 						<configuration>
+						
 							<outputFile>${plugin.file}</outputFile>
 							<filters></filters>
 							<transformers>
@@ -68,6 +70,26 @@
 								</filter>
 							</filters>
 						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>1.7</version>
+				<inherited>false</inherited>
+				<executions>
+					<execution>
+						<id>copy</id>
+						<phase>install</phase>
+						<configuration>
+							<target name="delete tmp dir">
+								<delete dir="${basedir}/../../demo-all-in-one" />
+							</target>
+						</configuration>
+						<goals>
+							<goal>run</goal>
+						</goals>
 					</execution>
 				</executions>
 			</plugin>
