@@ -15,7 +15,7 @@
     <workloadAdapter>
         <extensionName>workload.satellite.adapter.customized</extensionName>
         <config key="org.spotter.satellite.adapter.name" value="Customized Workload Satellite Adapter"/>
-        <config key="org.spotter.workload.simple.userScriptClassName" value="org.spotter.ext.demo.load.VUser"/>
-        <config key="org.spotter.workload.simple.userScriptPath" value="C:/Users/c5170547/Documents/DynamicSpotter/SPEC-RG submission/DS-Demo/Executables/loadScript"/>
+        <config key="org.spotter.workload.simple.userScriptClassName" value="org.spotter.demo.load.VUser"/>
+        <config key="org.spotter.workload.simple.userScriptPath" value="loadScript/"/>
     </workloadAdapter>
 </measurementEnvironment>

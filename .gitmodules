@@ -1,6 +1,0 @@
-[submodule "DynamicSpotter"]
-	path = DynamicSpotter
-	url = https://github.com/sopeco/DynamicSpotter.git
-[submodule "DynamicSpotter-Extensions"]
-	path = DynamicSpotter-Extensions
-	url = https://github.com/sopeco/DynamicSpotter-Extensions.git
