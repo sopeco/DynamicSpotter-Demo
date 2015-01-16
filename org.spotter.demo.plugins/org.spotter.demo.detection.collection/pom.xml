@@ -9,14 +9,14 @@
 		<relativePath>..</relativePath>
 	</parent>
 
-	<artifactId>org.spotter.demo.detection.olb</artifactId>
+	<artifactId>org.spotter.demo.detection.collection</artifactId>
 	<packaging>pom</packaging>
-	<name>DynamicSpotter Demo OLB Detection Plugin</name>
+	<name>DynamicSpotter Demo Collection Detection Plugins</name>
 
 	<dependencies>
 		<dependency>
 			<groupId>org.spotter.ext</groupId>
-			<artifactId>org.spotter.ext.detection.olb</artifactId>
+			<artifactId>org.spotter.ext.detection.collection</artifactId>
 			<version>${spotter.ext.version}</version>
 		</dependency>
 	</dependencies>
