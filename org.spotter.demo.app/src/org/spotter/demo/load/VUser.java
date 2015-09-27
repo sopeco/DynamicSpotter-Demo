@@ -19,7 +19,7 @@ import java.util.Random;
 
 import javax.ws.rs.core.MediaType;
 
-import org.lpe.common.util.web.LpeWebUtils;
+import org.lpe.common.util.LpeHTTPUtils;
 import org.spotter.ext.workload.simple.ISimpleVUser;
 
 import com.sun.jersey.api.client.Client;
@@ -43,7 +43,7 @@ public class VUser implements ISimpleVUser {
 	 * Construcotr.
 	 */
 	public VUser() {
-		Client client = LpeWebUtils.getWebClient();
+		final Client client = LpeHTTPUtils.getWebClient();
 		client.setConnectTimeout(TIMEOUT);
 		client.setReadTimeout(TIMEOUT);
 		webResource = client.resource("http://localhost:8081/");
@@ -59,14 +59,14 @@ public class VUser implements ISimpleVUser {
 			// call Fibonacci service
 			webResource.path("demo").path("fibonacci").accept(MediaType.APPLICATION_JSON).get(String.class);
 			Thread.sleep(getNextThinkTime());
-		} catch (Throwable e) {
+		} catch (final Throwable e) {
 			// ignoring exception
 			e.printStackTrace();
 		}
 	}
 
 	private long getNextThinkTime() {
-		int r = random.nextInt(THINK_TIME_MAX - THINK_TIME_MIN);
+		final int r = random.nextInt(THINK_TIME_MAX - THINK_TIME_MIN);
 		return THINK_TIME_MIN + r;
 	}
 
