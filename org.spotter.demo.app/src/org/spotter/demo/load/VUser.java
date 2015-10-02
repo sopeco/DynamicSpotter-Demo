@@ -19,7 +19,7 @@ import java.util.Random;
 
 import javax.ws.rs.core.MediaType;
 
-import org.lpe.common.util.LpeHTTPUtils;
+import org.lpe.common.util.web.LpeHTTPUtils;
 import org.spotter.ext.workload.simple.ISimpleVUser;
 
 import com.sun.jersey.api.client.Client;
